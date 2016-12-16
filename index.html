@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Demo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="bower_components/px-chart/css/px-chart-demo.css"/>
+    <!-- Import custom element. Note: see comment about relative paths to dependencies in the *.html file referenced below -->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="bower_components/px-theme/px-theme-styles.html">
+    <style include="px-theme-styles" is="custom-style"></style>
+
+    <link rel="import" href="bower_components/iron-ajax/iron-ajax.html"/>
+    <link rel="import" href="bower_components/px-api-viewer/px-api-viewer.html"/>
+    <link rel="import" href="bower_components/px-tabs/px-tab-set.html"/>
+    <link rel="import" href="bower_components/px-dropdown/px-dropdown.html"/>
+    <link rel="import" href="bower_components/px-chart/px-chart.html"/>
+    <link rel="import" href="bower_components/px-demo-snippet/px-demo-snippet.html">
+    <link rel="import" href="bower_components/px-polymer-font-awesome/polymer-font-awesome.html"/>
+
+</head>
+
+<body>
+<div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Demo Project
+                </a>
+            </li>
+            <li>
+                <a href="#/">Analytics Dashboard</a>
+            </li>
+            <li>
+                <a href="#/demo">Demo</a>
+            </li>
+            <!--<li>-->
+            <!--<a href="#/about">About</a>-->
+            <!--</li>-->
+
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <script type="text/ng-template" id="pages/home.html">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Analytics Dashboard</h1>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="isWellnessOpen = !isWellnessOpen">Feild 1 <span class="glyphicons glyphicons-chevron-right"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="isWellnessOpen = !isWellnessOpen">Feild 2 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="col-lg-3" ng-show="isWellnessOpen" id="isWellnessOpen">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="isthirdOpen = !isthirdOpen">Well 1 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="flow-fonts cpointer txtlink" ng-click="isScreen2 = !isScreen2">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="isthirdOpen = !isthirdOpen">Well 2 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen2 = !isScreen2">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="isthirdOpen = !isthirdOpen">Well 3 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen2 = !isScreen2">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="col-lg-3" ng-show="isthirdOpen" id="isthirdOpen">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="isfourthOpen = !isfourthOpen">Sensor 1 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen3 = !isScreen3">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="isfourthOpen = !isfourthOpen">Sensor 2 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen3 = !isScreen3">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="isfourthOpen = !isfourthOpen">Sensor 3 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen3 = !isScreen3">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-lg-3" ng-show="isfourthOpen" id="isfourthOpen">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <td class="flow-fonts cpointer">Model: Q3ED23</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer">Type: Pressure</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer">Status: ON</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Screen 2 -->
+                <div class="row" ng-show="isScreen2" id="isScreen2">
+                    <div class="col-lg-12">
+                        <h1 class="text-center">Wells Information</h1>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card text-xs-center">
+                                    <div class="card-header">
+                                        Well 1
+                                    </div>
+                                    <div class="card-block">
+                                        <h4 class="card-title">Fracking Zone 22</h4>
+                                        <img class="img-responsive" src="image/whmain.png" border="0"/>
+                                        <a href="#" class="btn btn-primary btn-lg btn-block">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card text-xs-center">
+                                    <div class="card-header">
+                                        Well 2
+                                    </div>
+                                    <div class="card-block">
+                                        <h4 class="card-title">Perfing Zone 21</h4>
+                                        <img class="img-responsive" src="image/whmain.png" border="0"/>
+                                        <a href="#" class="btn btn-primary btn-lg btn-block">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card text-xs-center">
+                                    <div class="card-header">
+                                        Well 1
+                                    </div>
+                                    <div class="card-block">
+                                        <h4 class="card-title">Fracking Zone 24</h4>
+                                        <img class="img-responsive" src="image/whmain.png" border="0"/>
+                                        <a href="#" class="btn btn-primary btn-lg btn-block">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-show="isScreen3" id="isScreen3">
+                    <div class="col-lg-12">
+                        <div class='btn-toolbar pull-right'>
+                            <div class="card">
+                                <div class="card-block">
+                                    <h4 class="card-title">Well Details</h4>
+                                    <h6 class="card-subtitle text-muted"></h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Location: Area 21</li>
+                                    <li class="list-group-item">Event Log</li>
+                                    <li class="list-group-item">Time: 11/01/2013 12:00 AM</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h1 class="text-center">Well and Sensor Information </h1>
+
+                        <div class="row cborder">
+                            <div class="col-lg-6 cborder">
+                                <img class="img-responsive" src="image/whmain.png" border="0"/>
+                            </div>
+                            <div class="col-lg-6 cborder">
+                                <px-chart>
+                                    <px-chart-series-line id='hpt-acc-position-cruise'
+                                                          data='[[1397102460000, 11.4403],[1397139660000, 13.1913],[1397177400000, 12.8485],[1397228040000, 10.975],[1397248260000, 12.9377],[1397291280000, 13.3795],[1397318100000, 13.0869],[1397342100000, 17.3758]]'></px-chart-series-line>
+                                    <px-chart-controls
+                                            data-controls
+                                            show-export="[[item.showExport]]"
+                                            preset-ranges="[[item.presetRanges]]"
+                                            preset-controls="[[item.presetControls]]">
+                                    </px-chart-controls>
+                                </px-chart>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script type="text/ng-template" id="pages/demo.html">
+            <h1>Demo</h1>
+            <h3>{{message}}</h3>
+        </script>
+        <script type="text/ng-template" id="pages/about.html">
+            <h1>About</h1>
+            <h3>{{message}}</h3>
+        </script>
+
+        <div ng-view></div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+<style>
+    .hidebox {
+        display: none;
+    }
+
+    .cpointer {
+        cursor: pointer;
+    }
+</style>
+<script>
+    window.addEventListener('WebComponentsReady', function () {
+
+        var template = document.querySelector('template[is=dom-bind]'),
+                optionsArray = [
+                    {
+                        "parentComponent": ["<px-chart>", "</px-chart>"],
+                        "showExports": true,
+                        "showDataRange": true,
+                        "data-controls": true
+                    },
+                    {
+                        "parentComponent": ["<px-chart>", "</px-chart>"],
+                        "lightDomContent": "<button class='btn'>My Special button</button>",
+                        "data-controls": true
+                    }
+                ],
+                indexPlusOne = function (num) {
+                    return num + 1;
+                },
+                onlyOneConfigItem = function () {
+                    return (optionsArray.length === 1);
+                },
+                secondTab = function (index) {
+                    return index === 1;
+                };
+
+        template.selected = "0";
+        template.optionsArray = optionsArray;
+        template.indexPlusOne = indexPlusOne;
+        template.secondTab = secondTab;
+    });
+</script>
+
+</body>
+
+</html>
