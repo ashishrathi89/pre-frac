@@ -1,6 +1,7 @@
 app.controller('HomeController', function($scope) {
 	$scope.message = 'Hello from HomeController';
 	$scope.toggleField = function() {
+		
 		if ($scope.isWellnessOpen = !$scope.isWellnessOpen) {
 			$scope.isWellnessOpen = true;
 		} else {
@@ -31,6 +32,26 @@ app.controller('HomeController', function($scope) {
 			$scope.isScreen3 = false;
 		}
 	};
+	
+	$scope.toggleScreen2 = function() {  
+        if($scope.isScreen2 = !$scope.isScreen2){
+			$scope.isScreen2 = true;
+			$scope.isScreen3 = false;
+		}else{
+			
+			$scope.isScreen2 = false;
+			$scope.isScreen3 = false;
+         }
+      };
+	  $scope.toggleScreen3 = function() {  
+        if($scope.isScreen3 = !$scope.isScreen3){
+			$scope.isScreen3 = true;
+			$scope.isScreen2 = false;
+		}else{
+			$scope.isScreen3 = false;
+			$scope.isScreen2 = false;
+         }
+      };
 
 	$scope.chartOptions = {
 		title : {
