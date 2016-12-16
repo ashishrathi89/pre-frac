@@ -11,6 +11,10 @@ app.config(function($routeProvider) {
     templateUrl : 'pages/demo.html',
     controller  : 'DemoController'
   })
+  .when('/secon-demo', {
+    templateUrl : 'pages/homebk.html',
+    controller  : 'HomeController'
+  })
 
   .when('/about', {
     templateUrl : 'pages/about.html',
