@@ -46,6 +46,8 @@ var app = angular.module('myApp', ['ngRoute']);
 				}
 			};
 		});
+		
+// Routing Information 		
 app.config(function($routeProvider) {
   $routeProvider
   .when('/', {
@@ -70,6 +72,7 @@ app.config(function($routeProvider) {
   .otherwise({redirectTo: '/'});
 });
 
+// Controller 
 app.controller('HomeController', function($scope) { 
   $scope.message = 'Hello from HomeController';
   $scope.toggleField = function() { 
