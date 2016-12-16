@@ -1,15 +1,22 @@
 app.controller('HomeController', function($scope) {
 	$scope.message = 'Hello from HomeController';
 	$scope.toggleField = function() {
-		
+		if(!$(this).hasClass("greenDiv")) {
+		$(this).addClass("greenDiv");
+		} else {
+		$(this).removeClass("greenDiv");
+		}
+
 		if ($scope.isWellnessOpen = !$scope.isWellnessOpen) {
 			$scope.isWellnessOpen = true;
+			//$scope.myStyle={'background-color':'grey'};
 		} else {
 			$scope.isWellnessOpen = false;
 			$scope.isthirdOpen = false;
 			$scope.isfourthOpen = false;
 			$scope.isScreen2 = false;
 			$scope.isScreen3 = false;
+			//$scope.myStyle={'background-color':''};
 
 		}
 	};
