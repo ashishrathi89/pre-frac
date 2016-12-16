@@ -1,0 +1,196 @@
+ <div class="container-fluid">
+               
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Analytics Dashboard</h1>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="toggleField();">Feild 1 <span class="glyphicons glyphicons-chevron-right"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="toggleField();">Feild 2 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="col-lg-3" ng-show="isWellnessOpen" id="isWellnessOpen">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="toggleWell();">Well 1 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="flow-fonts cpointer txtlink" ng-click="isScreen2 = !isScreen2">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="toggleWell();">Well 2 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen2 = !isScreen2">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="toggleWell();">Well 3 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen2 = !isScreen2">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="col-lg-3" ng-show="isthirdOpen" id="isthirdOpen">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="toggleSensor();">Sensor 1 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen3 = !isScreen3">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="toggleSensor();">Sensor 2 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen3 = !isScreen3">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer" ng-click="toggleSensor();">Sensor 3 <span
+                                                class="glyphicon glyphicon-menu-right"></span></td>
+                                        <td class="cpointer txtlink" ng-click="isScreen3 = !isScreen3">
+                                            <button type="button" class="btn btn-default btn-sm">
+                                                Open
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-lg-3" ng-show="isfourthOpen" id="isfourthOpen">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <td class="flow-fonts cpointer">Model: Q3ED23</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer">Type: Pressure</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="flow-fonts cpointer">Status: ON</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+				
+				
+				<!--Screen 2 -->
+                <div class="row" ng-show="isScreen2" id="isScreen2">
+                    <div class="col-lg-12">
+                        <h1 class="text-center">Wells Information</h1>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card text-xs-center">
+                                    <div class="card-header">
+                                        Well 1
+                                    </div>
+                                    <div class="card-block">
+                                        <h4 class="card-title">Fracking Zone 22</h4>
+                                        <img class="img-responsive" src="image/whmain.png" border="0"/>
+                                        <a href="#" class="btn btn-primary btn-lg btn-block">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card text-xs-center">
+                                    <div class="card-header">
+                                        Well 2
+                                    </div>
+                                    <div class="card-block">
+                                        <h4 class="card-title">Perfing Zone 21</h4>
+                                        <img class="img-responsive" src="image/whmain.png" border="0"/>
+                                        <a href="#" class="btn btn-primary btn-lg btn-block">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card text-xs-center">
+                                    <div class="card-header">
+                                        Well 1
+                                    </div>
+                                    <div class="card-block">
+                                        <h4 class="card-title">Fracking Zone 24</h4>
+                                        <img class="img-responsive" src="image/whmain.png" border="0"/>
+                                        <a href="#" class="btn btn-primary btn-lg btn-block">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-show="isScreen3" id="isScreen3">
+                    <div class="col-lg-12">
+                        <div class='btn-toolbar pull-right'>
+                            <div class="card">
+                                <div class="card-block">
+                                    <h4 class="card-title">Well Details</h4>
+                                    <h6 class="card-subtitle text-muted"></h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Location: Area 21</li>
+                                    <li class="list-group-item">Event Log</li>
+                                    <li class="list-group-item">Time: 11/01/2013 12:00 AM</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h1 class="text-center">Well and Sensor Information </h1>
+
+                        <div class="row cborder">
+                            <div class="col-lg-6 cborder">
+                                <img class="img-responsive" src="image/whmain.png" border="0"/>
+                            </div>
+                            <div class="col-lg-6 cborder">
+                                <px-chart>
+                                    <px-chart-series-line id='hpt-acc-position-cruise'
+                                                          data='[[1397102460000, 11.4403],[1397139660000, 13.1913],[1397177400000, 12.8485],[1397228040000, 10.975],[1397248260000, 12.9377],[1397291280000, 13.3795],[1397318100000, 13.0869],[1397342100000, 17.3758]]'></px-chart-series-line>
+                                    <px-chart-controls
+                                            data-controls
+                                            show-export="[[item.showExport]]"
+                                            preset-ranges="[[item.presetRanges]]"
+                                            preset-controls="[[item.presetControls]]">
+                                    </px-chart-controls>
+                                </px-chart>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div> 

@@ -2,7 +2,6 @@ var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function($routeProvider) {
   $routeProvider
-
   .when('/', {
     templateUrl : 'pages/home.html',
     controller  : 'HomeController'
@@ -21,8 +20,40 @@ app.config(function($routeProvider) {
   .otherwise({redirectTo: '/'});
 });
 
-app.controller('HomeController', function($scope) {
+app.controller('HomeController', function($scope) { 
   $scope.message = 'Hello from HomeController';
+  $scope.toggleField = function() { 
+        if($scope.isWellnessOpen = !$scope.isWellnessOpen){
+			$scope.isWellnessOpen = true;
+		}else{
+			$scope.isWellnessOpen = false;
+			$scope.isthirdOpen = false;
+			$scope.isfourthOpen = false;
+			$scope.isScreen2 = false;
+			$scope.isScreen3 = false;
+			
+		}
+      };
+	   $scope.toggleWell = function() { 
+        if($scope.isthirdOpen = !$scope.isthirdOpen){
+			$scope.isthirdOpen = true;
+		}else{
+			$scope.isthirdOpen = false;
+			$scope.isfourthOpen = false;
+			$scope.isScreen2 = false;
+			$scope.isScreen3 = false;
+         }
+      };
+	   $scope.toggleSensor = function() { 
+        if($scope.isfourthOpen = !$scope.isfourthOpen){
+			$scope.isfourthOpen = true;
+		}else{
+			
+			$scope.isfourthOpen = false;
+			$scope.isScreen3 = false;
+         }
+      };
+	  
 });
 
 app.controller('DemoController', function($scope) {
