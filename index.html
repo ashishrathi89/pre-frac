@@ -2,114 +2,112 @@
 <html lang="en" ng-app="myApp">
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, shrink-to-fit=no, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <title>Demo</title>
+<title>Demo</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-    <script type="text/javascript" src="js/highcharts.js"></script>
-    <script type="text/javascript" src="js/exporting.js"></script>
-    <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/dashboard.css" rel="stylesheet">
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css"
+	integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
+	crossorigin="anonymous">
+<script type="text/javascript" src="js/highcharts.js"></script>
+<script type="text/javascript" src="js/exporting.js"></script>
+<!-- Custom CSS -->
+<link href="css/simple-sidebar.css" rel="stylesheet">
+<link href="css/dashboard.css" rel="stylesheet">
 
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-route.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="bower_components/px-chart/css/px-chart-demo.css"/>
-    <!-- Import custom element. Note: see comment about relative paths to dependencies in the *.html file referenced below -->
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="bower_components/px-chart/css/px-chart-demo.css" />
+<!-- Import custom element. Note: see comment about relative paths to dependencies in the *.html file referenced below -->
+<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="bower_components/px-theme/px-theme-styles.html">
-    <style include="px-theme-styles" is="custom-style"></style>
+<link rel="import" href="bower_components/px-theme/px-theme-styles.html">
+<style include="px-theme-styles" is="custom-style"></style>
 
-    <link rel="import" href="bower_components/iron-ajax/iron-ajax.html"/>
-    <link rel="import" href="bower_components/px-api-viewer/px-api-viewer.html"/>
-    <link rel="import" href="bower_components/px-tabs/px-tab-set.html"/>
-    <link rel="import" href="bower_components/px-dropdown/px-dropdown.html"/>
-    <link rel="import" href="bower_components/px-chart/px-chart.html"/>
-    <link rel="import" href="bower_components/px-demo-snippet/px-demo-snippet.html">
-    <link rel="import" href="bower_components/px-polymer-font-awesome/polymer-font-awesome.html"/>
-	
-	
+<link rel="import" href="bower_components/iron-ajax/iron-ajax.html" />
+<link rel="import"
+	href="bower_components/px-api-viewer/px-api-viewer.html" />
+<link rel="import" href="bower_components/px-tabs/px-tab-set.html" />
+<link rel="import" href="bower_components/px-dropdown/px-dropdown.html" />
+<link rel="import" href="bower_components/px-chart/px-chart.html" />
+<link rel="import"
+	href="bower_components/px-demo-snippet/px-demo-snippet.html">
+<link rel="import"
+	href="bower_components/px-polymer-font-awesome/polymer-font-awesome.html" />
+
+
 </head>
 
 <body>
-<div id="wrapper">
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                    Demo Project
-                </a>
-            </li>
-            <li>
-                <a href="#/">Analytics Dashboard</a>
-            </li>
-            <li>
-                <a href="#/demo">Demo</a>
-            </li>
-			<li>
-                <a href="#/secon-demo">Analytics Dashboard Demo 2</a>
-            </li>
-            <!--<li>-->
-            <!--<a href="#/about">About</a>-->
-            <!--</li>-->
+	<div id="wrapper">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand"><a href="#"> Demo Project </a></li>
+				<li><a href="#/">Analytics Dashboard</a></li>
+				<li><a href="#/demo">Demo</a></li>
+				<li><a href="#/secon-demo">Analytics Dashboard Demo 2</a></li>
+				<!--<li>-->
+				<!--<a href="#/about">About</a>-->
+				<!--</li>-->
 
-        </ul>
-    </div>
-    <!-- /#sidebar-wrapper -->
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div ng-view></div>
-    </div>
-    <!-- /#page-content-wrapper -->
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div ng-view></div>
+		</div>
+		<!-- /#page-content-wrapper -->
 
-</div>
-<!-- /#wrapper -->
+	</div>
+	<!-- /#wrapper -->
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/app.js"></script>
-<script src="js/directives/directive.js"></script>
-<script src="js/config/route.js"></script>
-<script src="js/controllers/controller.js"></script>
-<!-- Menu Toggle Script -->
-<script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/directives/directive.js"></script>
+	<script src="js/config/route.js"></script>
+	<script src="js/controllers/controller.js"></script>
+	<!-- Menu Toggle Script -->
+	<script>
     $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
 </script>
-<style>
-    .hidebox {
-        display: none;
-    }
+	<style>
+.hidebox {
+	display: none;
+}
 
-    .cpointer {
-        cursor: pointer;
-    }
-	.modal-lg {
-		max-width: 1293px;
-	}
+.cpointer {
+	cursor: pointer;
+}
+
+.modal-lg {
+	max-width: 1293px;
+}
 </style>
-<script>
+	<script>
     window.addEventListener('WebComponentsReady', function () {
 
         var template = document.querySelector('template[is=dom-bind]'),
