@@ -12,7 +12,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-   
+    <script type="text/javascript" src="js/highcharts.js"></script>
+    <script type="text/javascript" src="js/exporting.js"></script>
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
@@ -40,7 +41,8 @@
     <link rel="import" href="bower_components/px-chart/px-chart.html"/>
     <link rel="import" href="bower_components/px-demo-snippet/px-demo-snippet.html">
     <link rel="import" href="bower_components/px-polymer-font-awesome/polymer-font-awesome.html"/>
-
+	
+	
 </head>
 
 <body>
@@ -100,6 +102,9 @@
     .cpointer {
         cursor: pointer;
     }
+	.modal-lg {
+		max-width: 1293px;
+	}
 </style>
 <script>
     window.addEventListener('WebComponentsReady', function () {
